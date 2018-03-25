@@ -1,0 +1,7 @@
+target:
+  - { repository: repository1, branch: master }
+  - { repository: repository2, branch:  }
+tag_name: v0.0.0
+tag_description: test tag
+release_name: v0.0.0
+release_description: test release

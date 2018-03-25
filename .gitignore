@@ -1,5 +1,10 @@
+# python
 venv
 __pycache__/
 *.pyc
 
+# editor
 .vscode
+
+# config
+config/test.yml

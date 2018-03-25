@@ -14,7 +14,7 @@ CONFIG_PATH = './config/'
 # token
 github_access_token = os.getenv('GITHUB_ACCESS_TOKEN', None)
 
-def unpublish_release(token, yaml):
+def unpublish(token, yaml):
     g = Github(token)
 
     for i in range(len(yaml['target'])):
@@ -36,7 +36,7 @@ def unpublish_release(token, yaml):
         ref = repository.get_git_ref('tags/' + yaml['tag_name'])
         ref.delete()
 
-def publish_release(token, yaml):
+def publish(token, yaml):
     g = Github(token)
 
     for i in range(len(yaml['target'])):
@@ -79,9 +79,9 @@ def main():
         sys.exit(1)
 
     if (args.delete):
-        unpublish_release(github_access_token, yaml)
+        unpublish(github_access_token, yaml)
     else:
-        publish_release(github_access_token, yaml)    
+        publish(github_access_token, yaml)
 
 if __name__ == '__main__':
     main()
