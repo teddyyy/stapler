@@ -11,9 +11,6 @@ from github import GitRelease
 # PATH
 CONFIG_PATH = './config/'
 
-# token
-github_access_token = os.getenv('GITHUB_ACCESS_TOKEN', None)
-
 def unpublish(token, yaml):
     g = Github(token)
 
@@ -69,6 +66,7 @@ def main():
     parser.add_argument('-d', "--delete", action='store_true')
     args = parser.parse_args()
 
+    github_access_token = os.getenv('GITHUB_ACCESS_TOKEN', None)
     if github_access_token is None:
         print('Specify GITHUB_ACCESS_TOKEN as environment variable.')
         sys.exit(1)

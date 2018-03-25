@@ -1,6 +1,5 @@
 target:
-  - { repository: repository1, branch: master }
-  - { repository: repository2, branch:  }
+  - { repository: stapler, branch: master }
 tag_name: v0.0.0
 tag_description: test tag
 release_name: v0.0.0
