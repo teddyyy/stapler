@@ -1,0 +1,8 @@
+target:
+  - { repository: line-ping-pong, branch: test-branch }
+  - { repository: nidus, branch: master }
+  - { repository: hoge6tun, branch: }
+tag_name: v0.0.0
+tag_description: test
+release_name: v0.0.0
+release_description: test
